@@ -4,4 +4,5 @@ def main():
 
 
 # Call your function in order for the program to start
-main()
+if __name__=="__main__":
+    main()
