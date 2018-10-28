@@ -1,3 +1,5 @@
+from nltk.tokenize import sent_tokenize
+
 def lines(a, b):
     """Return lines in both a and b"""
     asplit = a.splitlines()
@@ -14,9 +16,15 @@ def lines(a, b):
 
 def sentences(a, b):
     """Return sentences in both a and b"""
+    asent = sent_tokenize(a)
+    bsent = sent_tokenize(b)
+    compareSent = []
 
+    for sentence in range (len(asent)):
+        if asent[sentence] == bsent[sentence]:
+            compareSent.append(asent[sentence])
     # TODO
-    return []
+    return compareSent
 
 
 def substrings(a, b, n):
