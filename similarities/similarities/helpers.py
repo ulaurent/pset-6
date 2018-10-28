@@ -29,6 +29,18 @@ def sentences(a, b):
 
 def substrings(a, b, n):
     """Return substrings of length n in both a and b"""
+    compareSubStr = []
+    index = 0
+
+    for I in range (len(a)):
+        asub = a[I:n]
+        compareSubStr.append(asub)
+        #print(I)
+        n+=1
+        #print(compareSubStr[I])
+
+    print(n)
+
 
     # TODO
-    return []
+    return compareSubStr
