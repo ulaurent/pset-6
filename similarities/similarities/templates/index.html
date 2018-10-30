@@ -4,9 +4,15 @@
 
     <div class="col">
         <form action="/compare" enctype="multipart/form-data" method="post">
-
-            <!-- TODO -->
-
+            <label for="file1">File 1: </label>
+            <input type="file" name="file1" accept="text/*"> <br/>
+            <label for="file2">File 2: </label>
+            <input type="file" name="file2" accept="text/*"> <br/>
+            <input type="radio" name="algorithm" value="lines" checked/> Compare lines<br/>
+            <input type="radio" name="algorithm" value="sentences"/> Compare sentences<br/>
+            <input type="radio" name="algorithm" value="substrings"/> Compare substrings<br/>
+                <input type="number" name="length" placeholder="of length n" min="1"> <br/>
+            <input type="submit" value="Compare">
         </form>
     </div>
 
